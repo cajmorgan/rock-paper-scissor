@@ -1,7 +1,9 @@
+//Global variables
 var countP = 0;
 var countC = 0;
 var num = 0;
 
+//Computer selector
 function computerPlay(min = 1, max = 3) {
     let randomNum = Math.floor(Math.random() * (max - min + 1) + min); 
     switch(randomNum) {
@@ -19,11 +21,12 @@ function computerPlay(min = 1, max = 3) {
     
 }
 
+//Gameplay
 function letsPlay() {
     message = "";
-    let playerSelection = prompt('enter: rock, paper or scissors');
-    while(playerSelection.toLowerCase() != 'rock' && playerSelection.toLowerCase() != 'paper' && playerSelection.toLocaleLowerCase() != 'scissors' ) {
-         playerSelection = prompt('Check your spelling! enter: rock, paper or scissors');
+    // let playerSelection = prompt('Enter: rock, paper or scissors');
+    while(playerSelection.toLowerCase() != 'rock' && playerSelection.toLowerCase() != 'paper' && playerSelection.toLowerCase() != 'scissors' ) {
+         playerSelection = prompt('Check your spelling! Enter: rock, paper or scissors');
     };
 
     let computerSelection = computerPlay();
@@ -74,6 +77,7 @@ function letsPlay() {
    
 }
 
+//How many rounds should we play?
 function gameRounds() {
     while(num < 3) {
         num += 1;
@@ -81,9 +85,10 @@ function gameRounds() {
     }
 }
 
+//starts the game
 gameRounds();
 
-
+//Counting the score
 function scoreAdder() {
     if (num == 3 && countC > countP) {
         counter = (`Final Score: You Lost, Computer ${countC} vs you ${countP}`);
