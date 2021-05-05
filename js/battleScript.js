@@ -125,6 +125,12 @@ function computerPlay(min, max) {
     
       return randomNum;
     }
+
+    //Random health Popup 
+    function randomHealth(min, max) {
+        let randomHealthP = Math.floor(Math.random() * (max - min) + min);
+        return randomHealthP;
+    }
 //gMagic Use
 function gMagic() {
     let getComputerPlay = computerPlay(1, 3);
@@ -135,12 +141,20 @@ function gMagic() {
             gHealthLossTxt.classList.add('gHealthLossTxt')
             gHealthLossTxt.textContent = "-5";
             gHealthLoss.appendChild(gHealthLossTxt);
+            document.querySelector('.gHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //E Health Loss
             eHealth -= 5;
             eHealthLossTxt.classList.add('eHealthLossTxt')
             eHealthLossTxt.textContent = "-5";
             eHealthLoss.appendChild(eHealthLossTxt);
-            
+            document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
+            //Select button
+            gMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            eMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            setTimeout(() => {
+                gMagicBtn.style.boxShadow = "none";
+                eMagicBtn.style.boxShadow = "none";
+            }, 1000)
             
     }
     else if(getComputerPlay == 'eShield') {
@@ -149,6 +163,14 @@ function gMagic() {
             gHealthLossTxt.classList.add('gHealthLossTxt')
             gHealthLossTxt.textContent = "-30";
             gHealthLoss.appendChild(gHealthLossTxt);
+            document.querySelector('.gHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
+            //Select button
+            gMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            eShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            setTimeout(() => {
+                gMagicBtn.style.boxShadow = "none";
+                eShieldBtn.style.boxShadow = "none";
+            }, 1000)
             
             
     }
@@ -158,11 +180,21 @@ function gMagic() {
             gHealthLossTxt.classList.add('gHealthLossTxt')
             gHealthLossTxt.textContent = "-20";
             gHealthLoss.appendChild(gHealthLossTxt);
+            document.querySelector('.gHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //E Health Loss
             eHealth -= 30;
             eHealthLossTxt.classList.add('eHealthLossTxt')
             eHealthLossTxt.textContent = "-30";
             eHealthLoss.appendChild(eHealthLossTxt);
+            document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
+            //Select button
+            gMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            eWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            setTimeout(() => {
+                gMagicBtn.style.boxShadow = "none";
+                eWeaponBtn.style.boxShadow = "none";
+            }, 1000)
+            
             
     }
     console.log(gHealth);
@@ -182,6 +214,14 @@ function gShield() {
             eHealthLossTxt.classList.add('eHealthLossTxt')
             eHealthLossTxt.textContent = "-30";
             eHealthLoss.appendChild(eHealthLossTxt);
+            document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
+            //Select button
+            gShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            eMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            setTimeout(() => {
+                gShieldBtn.style.boxShadow = "none";
+                eMagicBtn.style.boxShadow = "none";
+            }, 1000)
     }
     else if(getComputerPlay == 'eShield') {
             //G Health Loss
@@ -190,11 +230,20 @@ function gShield() {
             gHealthLossTxt.classList.add('gHealthLossTxt')
             gHealthLossTxt.textContent = "BLOCK";
             gHealthLoss.appendChild(gHealthLossTxt);
+            document.querySelector('.gHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //E Health Loss
             eHealth -= 0;
             eHealthLossTxt.classList.add('eHealthLossTxt')
             eHealthLossTxt.textContent = "BLOCK";
             eHealthLoss.appendChild(eHealthLossTxt);
+            document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
+            //Select button
+            gShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            eShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            setTimeout(() => {
+                gShieldBtn.style.boxShadow = "none";
+                eShieldBtn.style.boxShadow = "none";
+            }, 1000)
     }
     else if(getComputerPlay == 'eWeapon') {
             battleTxt.textContent = "Your shield won't protect you forever";
@@ -202,6 +251,14 @@ function gShield() {
             gHealthLossTxt.classList.add('gHealthLossTxt')
             gHealthLossTxt.textContent = "-10";
             gHealthLoss.appendChild(gHealthLossTxt);
+            document.querySelector('.gHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
+            //Select button
+            gShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            eWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            setTimeout(() => {
+                gShieldBtn.style.boxShadow = "none";
+                eWeaponBtn.style.boxShadow = "none";
+            }, 1000)
     }
     console.log(gHealth);
     console.log(eHealth);
@@ -221,11 +278,20 @@ function gWeapon() {
             gHealthLossTxt.classList.add('gHealthLossTxt')
             gHealthLossTxt.textContent = "-30";
             gHealthLoss.appendChild(gHealthLossTxt);
+            document.querySelector('.gHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             // E Health Loss
             eHealth -= 20;
             eHealthLossTxt.classList.add('eHealthLossTxt')
             eHealthLossTxt.textContent = "-20";
             eHealthLoss.appendChild(eHealthLossTxt);
+            document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
+            //Select button
+            gWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            eMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            setTimeout(() => {
+                gWeaponBtn.style.boxShadow = "none";
+                eMagicBtn.style.boxShadow = "none";
+            }, 1000)
     }
     else if(getComputerPlay == 'eShield') {
             battleTxt.textContent = "Smash IT!";
@@ -234,6 +300,14 @@ function gWeapon() {
             eHealthLossTxt.classList.add('eHealthLossTxt')
             eHealthLossTxt.textContent = "-10";
             eHealthLoss.appendChild(eHealthLossTxt);
+            document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
+            //Select button
+            gWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            eShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            setTimeout(() => {
+                gWeaponBtn.style.boxShadow = "none";
+                eShieldBtn.style.boxShadow = "none";
+            }, 1000)
     }
     else if(getComputerPlay == 'eWeapon') {
             battleTxt.textContent = "Until last man stands huh?";
@@ -241,11 +315,20 @@ function gWeapon() {
             gHealthLossTxt.classList.add('gHealthLossTxt')
             gHealthLossTxt.textContent = "-20";
             gHealthLoss.appendChild(gHealthLossTxt);
+            document.querySelector('.gHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //E Health Loss
             eHealth -= 20;
             eHealthLossTxt.classList.add('eHealthLossTxt')
             eHealthLossTxt.textContent = "-20";
             eHealthLoss.appendChild(eHealthLossTxt);
+            document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
+            //Select button
+            gWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            eWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            setTimeout(() => {
+                gWeaponBtn.style.boxShadow = "none";
+                eWeaponBtn.style.boxShadow = "none";
+            }, 1000)
             
     }
     console.log(gHealth);
@@ -268,11 +351,21 @@ function eMagic() {
             gHealthLossTxt.classList.add('gHealthLossTxt')
             gHealthLossTxt.textContent = "-5";
             gHealthLoss.appendChild(gHealthLossTxt);
+            document.querySelector('.gHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //E Health Loss
             eHealth -= 5;
             eHealthLossTxt.classList.add('eHealthLossTxt')
             eHealthLossTxt.textContent = "-5";
             eHealthLoss.appendChild(eHealthLossTxt);
+            document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
+            //Select button
+            gMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            eMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            setTimeout(() => {
+                gMagicBtn.style.boxShadow = "none";
+                eMagicBtn.style.boxShadow = "none";
+            }, 1000)
+            
     }
     else if(getComputerPlay == 'gShield') {
             battleTxt.textContent = "Was that really smart?";
@@ -280,6 +373,14 @@ function eMagic() {
             eHealthLossTxt.classList.add('eHealthLossTxt')
             eHealthLossTxt.textContent = "-30";
             eHealthLoss.appendChild(eHealthLossTxt);
+            document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
+            //Select Button
+            gShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            eMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            setTimeout(() => {
+                gShieldBtn.style.boxShadow = "none";
+                eMagicBtn.style.boxShadow = "none";
+            }, 1000)
     }
     else if(getComputerPlay == 'gWeapon') {
             battleTxt.textContent = "You lost an arm, he lost a torso!";
@@ -288,11 +389,20 @@ function eMagic() {
             gHealthLossTxt.classList.add('gHealthLossTxt')
             gHealthLossTxt.textContent = "-30";
             gHealthLoss.appendChild(gHealthLossTxt);
+            document.querySelector('.gHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //E Health Loss
             eHealth -= 20;
             eHealthLossTxt.classList.add('eHealthLossTxt')
             eHealthLossTxt.textContent = "-20";
             eHealthLoss.appendChild(eHealthLossTxt);
+            document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
+            //Select Button
+            gWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            eMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            setTimeout(() => {
+                gWeaponBtn.style.boxShadow = "none";
+                eMagicBtn.style.boxShadow = "none";
+            }, 1000)
            
     }
     console.log(gHealth);
@@ -312,6 +422,14 @@ function eShield() {
             gHealthLossTxt.classList.add('gHealthLossTxt')
             gHealthLossTxt.textContent = "-30";
             gHealthLoss.appendChild(gHealthLossTxt);
+            document.querySelector('.gHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
+            //Select Button
+            gMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            eShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            setTimeout(() => {
+                gMagicBtn.style.boxShadow = "none";
+                eShieldBtn.style.boxShadow = "none";
+            }, 1000)
     }
     else if(getComputerPlay == 'gShield') {
             battleTxt.textContent = "Why don't you go and drink tea with the enemy instead?";
@@ -320,11 +438,20 @@ function eShield() {
             gHealthLossTxt.classList.add('gHealthLossTxt')
             gHealthLossTxt.textContent = "BLOCK";
             gHealthLoss.appendChild(gHealthLossTxt);
+            document.querySelector('.gHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //E Health Loss
             eHealth -= 0;
             eHealthLossTxt.classList.add('eHealthLossTxt')
             eHealthLossTxt.textContent = "BLOCK";
             eHealthLoss.appendChild(eHealthLossTxt);
+            document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
+            //Select Button
+            gShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            eShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            setTimeout(() => {
+                gShieldBtn.style.boxShadow = "none";
+                eShieldBtn.style.boxShadow = "none";
+            }, 1000)
     }
     else if(getComputerPlay == 'gWeapon') {
         battleTxt.textContent = "You can't hide forever";
@@ -333,6 +460,14 @@ function eShield() {
             eHealthLossTxt.classList.add('eHealthLossTxt')
             eHealthLossTxt.textContent = "-10";
             eHealthLoss.appendChild(eHealthLossTxt);
+            document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
+            //Select Button
+            gWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            eShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            setTimeout(() => {
+                gWeaponBtn.style.boxShadow = "none";
+                eShieldBtn.style.boxShadow = "none";
+            }, 1000)
     }
     console.log(gHealth);
     console.log(eHealth);
@@ -352,11 +487,20 @@ function eWeapon() {
             gHealthLossTxt.classList.add('gHealthLossTxt')
             gHealthLossTxt.textContent = "-20";
             gHealthLoss.appendChild(gHealthLossTxt);
+            document.querySelector('.gHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //E Health Loss
             eHealth -= 30;
             eHealthLossTxt.classList.add('eHealthLossTxt')
             eHealthLossTxt.textContent = "-30";
             eHealthLoss.appendChild(eHealthLossTxt);
+            document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
+             //Select Button
+             gMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+             eWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+             setTimeout(() => {
+                 gMagicBtn.style.boxShadow = "none";
+                 eWeaponBtn.style.boxShadow = "none";
+             }, 1000)
     }
     else if(getComputerPlay == 'gShield') {
             battleTxt.textContent = "Smash it!";
@@ -364,6 +508,14 @@ function eWeapon() {
             gHealthLossTxt.classList.add('gHealthLossTxt')
             gHealthLossTxt.textContent = "-10";
             gHealthLoss.appendChild(gHealthLossTxt);
+            document.querySelector('.gHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
+            //Select Button
+            gShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            eWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            setTimeout(() => {
+                gShieldBtn.style.boxShadow = "none";
+                eWeaponBtn.style.boxShadow = "none";
+            }, 1000)
     }
     else if(getComputerPlay == 'gWeapon') {
             battleTxt.textContent = "An eye for an eye";
@@ -372,11 +524,20 @@ function eWeapon() {
             gHealthLossTxt.classList.add('gHealthLossTxt')
             gHealthLossTxt.textContent = "-20";
             gHealthLoss.appendChild(gHealthLossTxt);
+            document.querySelector('.gHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //E Health
             eHealth -= 20;
             eHealthLossTxt.classList.add('eHealthLossTxt')
             eHealthLossTxt.textContent = "-20";
             eHealthLoss.appendChild(eHealthLossTxt);
+            document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
+            //Select Button
+            gWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            eWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            setTimeout(() => {
+                gWeaponBtn.style.boxShadow = "none";
+                eWeaponBtn.style.boxShadow = "none";
+            }, 1000)
             
     }
     console.log(gHealth);
