@@ -1,160 +1,344 @@
-html, body {
-    height: 100%
+html,
+body {
+  height: 100%;
 }
 
 body {
-    background-color: white;
-    transition-duration: 1s; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  transition-duration: 1s;
+  background-image: url("images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
 }
 
-
 #content {
-   display: grid;
-   grid-template-columns: repeat(5, 20%);
-   grid-template-rows: 100px 100px 100px 100px 100px, 100px, 100px, 100px;
-   grid-row-gap: 2px;
-   grid-column-gap: 5px;
-   border: 3px solid black;
-   text-align: center;
-   padding: 20px;
+  height: 90%;
+  flex-grow: 0.5;
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: 100px 100px 100px 100px 100px, 100px, 100px, 100px;
+  grid-row-gap: 2px;
+  grid-column-gap: 5px;
+  border: 3px solid black;
+  text-align: center;
+  padding: 20px;
+  transition-duration: 1s;
+  background-color: rgba(116, 116, 116, 0.2);
+  backdrop-filter: blur(10px);
+}
+@media (max-height: 900px) {
+  #content {
+    height: 100%;
+  }
+}
+@media (max-width: 900px) {
+  #content {
+    flex-grow: 1;
+  }
 }
 
 /* Evil Side */
 .eTextLabel1 {
-    grid-column-start: 2;
-    grid-row-start: 1;
-    border: 3px solid black;
-    align-self: center;
+  grid-column-start: 2;
+  grid-row-start: 1;
+  border: 3px solid black;
+  align-self: center;
 }
 .eTextLabel2 {
-    grid-column-start: 3;
-    grid-row-start: 1;
-    border: 3px solid black;
-    align-self: center;
+  grid-column-start: 3;
+  grid-row-start: 1;
+  border: 3px solid black;
+  align-self: center;
 }
 .eTextLabel3 {
-    grid-column-start: 4;
-    grid-row-start: 1;
-    border: 3px solid black;
-    align-self: center;
+  grid-column-start: 4;
+  grid-row-start: 1;
+  border: 3px solid black;
+  align-self: center;
 }
 
 #eMagic {
-    grid-column-start: 2;
-    grid-row-start: 2;
-    grid-row-end: 4;
-    padding: 0px 0px;
-    border: 3px solid black;
-    align-self: center;
-    justify-self: center;
+  grid-column-start: 2;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  padding: 0px 0px;
+  border: 3px solid black;
+  align-self: center;
+  justify-self: center;
+}
+#eMagic button {
+  padding: 20px 10px;
 }
 #eShield {
-    grid-column-start: 3;
-    grid-row-start: 2;
-    grid-row-end: 4;
-    padding: 0px 0px;
-    border: 3px solid black;
-    align-self: center;
-    justify-self: center;
+  grid-column-start: 3;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  padding: 0px 0px;
+  border: 3px solid black;
+  align-self: center;
+  justify-self: center;
+}
+#eShield button {
+  padding: 20px 10px;
 }
 #eWeapon {
-    grid-column-start: 4;
-    grid-row-start: 2;
-    grid-row-end: 4;
-    padding: 0px 0px;
-    border: 3px solid black;
-    align-self: center;
-    justify-self: center;
+  grid-column-start: 4;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  padding: 0px 0px;
+  border: 3px solid black;
+  align-self: center;
+  justify-self: center;
+}
+#eWeapon button {
+  padding: 20px 10px;
 }
 
 .eHealth {
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 4;
-    grid-row-end: 4;
-    border: 3px solid black;
-    border-radius: 10px;;
-    align-self: center;
-    
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 4;
+  border: 3px solid black;
+  border-radius: 10px;
+  align-self: center;
+}
+
+/* background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 0, 0, 1) 100%,
+    rgba(255, 0, 0, 0) 100% *
+  ); */
+
+.evilName {
+  position: relative;
+  z-index: 2;
+  top: 5px;
+}
+.eHealthBar {
+  position: relative;
+  padding: 10px;
+  padding-top: 40px;
+  margin-bottom: -60px;
+  border-radius: 7px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 0, 0, 1) 20%,
+    rgba(145, 0, 0, 1) 100%
+  );
+  transition-duration: 1s;
+  transform-origin: 0% 100%;
+  transform: scale(1, 1);
+  z-index: -1;
+}
+
+.eHealthLoss {
+  position: absolute;
+  margin: 0;
+  left: 49%;
+  top: 40%;
+  font-size: 20px;
+}
+
+.eHealthLossTxt {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  animation: loss 1s 1;
+}
+
+@keyframes loss {
+  0% {
+    opacity: 0;
+    top: 0;
+    color: rgb(255, 0, 0);
+  }
+  50% {
+    opacity: 1;
+    color: rgb(255, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    top: -20px;
+    color: rgb(123, 1, 1);
+  }
 }
 
 /* Battle Log */
 .battleLog {
-    border: 3px solid black;
-    align-self: center;
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 5;
-    grid-row-end: 5;
-    padding: 20px;
-    margin-top: 10px;
-    border-radius: 10px;
+  height: 40%;
+  border: 3px solid black;
+  align-self: center;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 7;
+  grid-row-end: 9;
+  padding: 120px;
+  margin: 0;
+  border-radius: 10px;
+  transition-duration: 1s;
 }
 
+.battleLog p,
+.name,
+.select,
+.battle {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 3%;
+  right: 0;
+  text-align: center;
+}
+.battleLog p {
+  top: 40%;
+}
 
+@media (max-height: 1100px) {
+  .battleLog {
+    height: 5%;
+  }
+}
+.name {
+  top: 50%;
+  transition-duration: 1s;
+}
+
+.restart {
+  display: none;
+}
 /* Good Side */
+.goodName {
+  position: relative;
+  z-index: 2;
+  top: 5px;
+}
 
 .gHealth {
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 11;
-    grid-row-end: 11;
-    border: 3px solid black;
-    border-radius: 10px;
-    align-self: center;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 11;
+  grid-row-end: 11;
+  border: 3px solid black;
+  border-radius: 10px;
+  align-self: center;
+}
+
+.gHealthBar {
+  position: relative;
+  padding: 10px;
+  padding-top: 40px;
+  margin-bottom: -60px;
+  border-radius: 7px;
+  background: linear-gradient(
+    180deg,
+    rgb(0, 217, 255) 20%,
+    rgb(0, 157, 255) 100%
+  );
+  transition-duration: 1s;
+  transform-origin: 0% 100%;
+  transform: scale(1, 1);
+  z-index: -1;
+}
+
+.gHealthLoss {
+  position: absolute;
+  margin: 0;
+  left: 49%;
+  top: 57%;
+  font-size: 20px;
+  pointer-events: none;
+}
+
+.gHealthLossTxt {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  animation: gloss 1s 1;
+}
+
+@keyframes gloss {
+  0% {
+    opacity: 0;
+    top: 0;
+    color: rgb(0, 166, 255);
+  }
+  50% {
+    opacity: 1;
+    color: rgb(0, 157, 255);
+  }
+  100% {
+    opacity: 0;
+    top: -20px;
+    color: rgb(8, 140, 255);
+  }
 }
 
 #gMagic {
-    grid-column-start: 2;
-    grid-row-start: 12;
-    grid-row-end: 12;
-    padding: 0px 0px;
-    border: 3px solid black;
-    align-self: center;
-    justify-self: center;
+  grid-column-start: 2;
+  grid-row-start: 12;
+  grid-row-end: 12;
+  padding: 0;
+  border: 3px solid black;
+  align-self: center;
+  justify-self: center;
+}
+#gMagic button {
+  padding: 20px 10px;
 }
 #gShield {
-    grid-column-start: 3;
-    grid-row-start: 12;
-    grid-row-end: 12;
-    padding: 0px 0px;
-    border: 3px solid black;
-    align-self: center;
-    justify-self: center;
+  grid-column-start: 3;
+  grid-row-start: 12;
+  grid-row-end: 12;
+  padding: 0px 0px;
+  border: 3px solid black;
+  align-self: center;
+  justify-self: center;
+}
+#gShield button {
+  padding: 20px 10px;
 }
 #gWeapon {
-    grid-column-start: 4;
-    grid-row-start: 12;
-    grid-row-end: 12;
-    padding: 0px 0px;
-    border: 3px solid black;
-    align-self: center;
-    justify-self: center;
+  grid-column-start: 4;
+  grid-row-start: 12;
+  grid-row-end: 12;
+  padding: 0px 0px;
+  border: 3px solid black;
+  align-self: center;
+  justify-self: center;
 }
-
+#gWeapon button {
+  padding: 20px 10px;
+}
 .gTextLabel1 {
-    grid-column-start: 2;
-    grid-row-start: 13;
-    grid-row-end: 13;
-    border: 3px solid black;
-    align-self: center;
+  grid-column-start: 2;
+  grid-row-start: 13;
+  grid-row-end: 13;
+  border: 3px solid black;
+  align-self: center;
+  margin-bottom: 40px;
 }
 .gTextLabel2 {
-    grid-column-start: 3;
-    grid-row-start: 13;
-    grid-row-end: 13;
-    border: 3px solid black;
-    align-self: center;
+  grid-column-start: 3;
+  grid-row-start: 13;
+  grid-row-end: 13;
+  border: 3px solid black;
+  align-self: center;
+  margin-bottom: 40px;
 }
 .gTextLabel3 {
-    grid-column-start: 4;
-    grid-row-start: 13;
-    grid-row-end: 13;
-    border: 3px solid black;
-    align-self: center;
+  grid-column-start: 4;
+  grid-row-start: 13;
+  grid-row-end: 13;
+  border: 3px solid black;
+  align-self: center;
+  margin-bottom: 40px;
 }
-
-
-
-
-

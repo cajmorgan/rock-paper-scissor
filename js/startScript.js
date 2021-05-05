@@ -1,9 +1,12 @@
+
 //Global variables
 const btn = document.querySelectorAll('.sButton');
 const btnName = document.querySelector('.enterName');
 const btnGood = document.querySelector('.goodButton');
 const btnEvil = document.querySelector('.evilButton');
 const nameApply = document.querySelector('.nameApply');
+const restartBtnC = document.querySelector('.restart');
+var pickSide = "";
 
 
 //Battle Log Global Selections
@@ -39,24 +42,29 @@ function selectScreen() {
     console.log(playerName);
 }
 
+    
+
 function goodSelect() {
+    pickSide = "good";
+    console.log(pickSide);
     applyName = document.querySelector('.goodName')
     applyName.textContent = `${playerName.toUpperCase()}`; 
     if(applyName.textContent.length == 0) {
         applyName.textContent = 'GOOD';
     }
-    console.log('You Are Good');
     for(i = 3; i < 6; i++)
     btn[i].disabled = false;
     //Change Content
     selectSide.style.display = "none";
     battleReady.style.display = "initial";
-    document.querySelector('body').style.backgroundColor = "hsl(185, 94%, 88%)";
+    document.querySelector('#content').style.backgroundColor = "rgba(0, 179, 255, 0.2)";
+    
 }
 btnGood.addEventListener('click', goodSelect);
 
 function evilSelect() {
-    console.log('You Are Evil');
+    pickSide = "evil";
+    console.log(pickSide);
     applyName = document.querySelector('.evilName')
     applyName.textContent = `${playerName.toUpperCase()}`;
     if(applyName.textContent.length == 0) {
@@ -67,12 +75,9 @@ function evilSelect() {
     //Change Content
     selectSide.style.display = "none";
     battleReady.style.display = "initial";
-    document.querySelector('body').style.backgroundColor = "red"; 
+    document.querySelector('#content').style.backgroundColor = "rgba(255, 0, 0, 0.2)"; 
 }
 btnEvil.addEventListener('click', evilSelect);
-
-
-
 
 
 

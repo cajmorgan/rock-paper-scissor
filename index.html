@@ -4,41 +4,42 @@
         <link rel="stylesheet" href="styles.css">
         <script src="js/startScript.js" defer></script>
         <script src="js/battleScript.js" defer></script>
+
     </head>
         <body onload="nameScreen()">
             <div id="content">
                     <!-- Evil Side -->
-                    <div class="eTextLabel1"><h3>MAGIC</h3></div>
-                    <div class="eTextLabel2"><h3>SHIELD</h3></div>
-                    <div class="eTextLabel3"><h3>SWORD</h3></div>
-                    <div id="eMagic"><button class="sButton"><img src="images/magicC.png" width="100" height="100"></button></div>
-                    <div id="eShield"><button class="sButton"><img src="images/shieldC.png" width="100" height="100"></button></div>
-                    <div id="eWeapon"><button class="sButton"><img src="images/weaponC.png" width="100" height="100"></button></div>
-                    <div class="eHealth"><h3 class="evilName">EVIL</h3></div>
+                    <div id="eMagic"><h3>MAGIC</h3><button id="eMagicBtn" class="sButton"><img src="images/magicC.png" width="100" height="100"></button></div>
+                    <div id="eShield"><h3>SHIELD</h3><button id="eShieldBtn" class="sButton"><img src="images/shieldC.png" width="100" height="100"></button></div>
+                    <div id="eWeapon"><h3>SWORD</h3><button id="eWeaponBtn" class="sButton"><img src="images/weaponC.png" width="100" height="100"></button></div>
+                    <div class="eHealthLoss"></div>
+                    <div class="eHealth"><div class="eHealthBar"></div><h3 class="evilName">EVIL</h3></div>
                     <!-- Battle Log -->
                     <div class="battleLog">
-                        <p>battle log</p>
+                        <!-- <p>battle log</p> -->
                         <div class="name">
                             <input class="nameApply" type="text" name="name" value="" placeholder="Your Name..."><br>
                             <button class="enterName" type="submit">Enter</button>
                         </div>
                         <div class="select">
                             <h3>Choose Wisely</h3> 
-                            <button class="goodButton">Good</button>
+                            <button onclick="hello()" class="goodButton">Good</button>
                             <button class="evilButton">Evil</button>
                         </div>
                         <div class="battle">
-                            <h3>Attack!</h3>
+                            <h3 class="battleTxt">Attack!</h3>
+                            <button class="restart">Restart</button>
+                        </div>
+                        <div class="reset">
+
                         </div>
                     </div>
                     <!-- Light Side -->
-                    <div class="gHealth"><h3 class="goodName">GOOD</h3></div>
-                    <div id="gMagic"><button class="sButton"><img src="images/magicP.png" width="100" height="100"></button></div>
-                    <div id="gShield"><button class="sButton"><img src="images/shieldP.png" width="100" height="100"></button></div>
-                    <div id="gWeapon"><button class="sButton"><img src="images/weaponP.png" width="100" height="100"></button></div>
-                    <div class="gTextLabel1"><h3>MAGIC</h3></div>
-                    <div class="gTextLabel2"><h3>SHIELD</h3></div>
-                    <div class="gTextLabel3"><h3>SWORD</h3></div>
+                    <div class="gHealth"><div class="gHealthBar"></div><h3 class="goodName">GOOD</h3></div>
+                    <div class="gHealthLoss"></div>
+                    <div id="gMagic"><button id="gMagicBtn" class="sButton"><img src="images/magicP.png" width="100" height="100"></button><h3>MAGIC</h3></div>
+                    <div id="gShield"><button id="gShieldBtn" class="sButton"><img src="images/shieldP.png" width="100" height="100"></button><h3>SHIELD</h3></div>
+                    <div id="gWeapon"><button id="gWeaponBtn" class="sButton"><img src="images/weaponP.png" width="100" height="100"></button><h3>SWORD</h3></div>
                      
             </div>
         </body>
