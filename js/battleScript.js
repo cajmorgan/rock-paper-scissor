@@ -149,8 +149,8 @@ function gMagic() {
             eHealthLoss.appendChild(eHealthLossTxt);
             document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //Select button
-            gMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
-            eMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            gMagicBtn.style.boxShadow = "0px 0px 40px rgb(53, 213, 253)";
+            eMagicBtn.style.boxShadow = "0px 0px 40px rgb(255, 0, 0)";
             setTimeout(() => {
                 gMagicBtn.style.boxShadow = "none";
                 eMagicBtn.style.boxShadow = "none";
@@ -165,8 +165,8 @@ function gMagic() {
             gHealthLoss.appendChild(gHealthLossTxt);
             document.querySelector('.gHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //Select button
-            gMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
-            eShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            gMagicBtn.style.boxShadow = "0px 0px 30px rgb(53, 213, 253)";
+            eShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 0, 0)";
             setTimeout(() => {
                 gMagicBtn.style.boxShadow = "none";
                 eShieldBtn.style.boxShadow = "none";
@@ -188,8 +188,8 @@ function gMagic() {
             eHealthLoss.appendChild(eHealthLossTxt);
             document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //Select button
-            gMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
-            eWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            gMagicBtn.style.boxShadow = "0px 0px 30px rgb(53, 213, 253)";
+            eWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 0, 0)";
             setTimeout(() => {
                 gMagicBtn.style.boxShadow = "none";
                 eWeaponBtn.style.boxShadow = "none";
@@ -216,8 +216,8 @@ function gShield() {
             eHealthLoss.appendChild(eHealthLossTxt);
             document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //Select button
-            gShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
-            eMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            gShieldBtn.style.boxShadow = "0px 0px 30px rgb(53, 213, 253)";
+            eMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 0, 0)";
             setTimeout(() => {
                 gShieldBtn.style.boxShadow = "none";
                 eMagicBtn.style.boxShadow = "none";
@@ -238,8 +238,8 @@ function gShield() {
             eHealthLoss.appendChild(eHealthLossTxt);
             document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //Select button
-            gShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
-            eShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            gShieldBtn.style.boxShadow = "0px 0px 30px rgb(53, 213, 253)";
+            eShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 0, 0)";
             setTimeout(() => {
                 gShieldBtn.style.boxShadow = "none";
                 eShieldBtn.style.boxShadow = "none";
@@ -253,8 +253,8 @@ function gShield() {
             gHealthLoss.appendChild(gHealthLossTxt);
             document.querySelector('.gHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //Select button
-            gShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
-            eWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            gShieldBtn.style.boxShadow = "0px 0px 30px rgb(53, 213, 253)";
+            eWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 0, 0)";
             setTimeout(() => {
                 gShieldBtn.style.boxShadow = "none";
                 eWeaponBtn.style.boxShadow = "none";
@@ -286,8 +286,8 @@ function gWeapon() {
             eHealthLoss.appendChild(eHealthLossTxt);
             document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //Select button
-            gWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
-            eMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            gWeaponBtn.style.boxShadow = "0px 0px 30px rgb(53, 213, 253)";
+            eMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 0, 0)";
             setTimeout(() => {
                 gWeaponBtn.style.boxShadow = "none";
                 eMagicBtn.style.boxShadow = "none";
@@ -302,8 +302,8 @@ function gWeapon() {
             eHealthLoss.appendChild(eHealthLossTxt);
             document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //Select button
-            gWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
-            eShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            gWeaponBtn.style.boxShadow = "0px 0px 30px rgb(53, 213, 253)";
+            eShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 0, 0)";
             setTimeout(() => {
                 gWeaponBtn.style.boxShadow = "none";
                 eShieldBtn.style.boxShadow = "none";
@@ -323,8 +323,8 @@ function gWeapon() {
             eHealthLoss.appendChild(eHealthLossTxt);
             document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //Select button
-            gWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
-            eWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            gWeaponBtn.style.boxShadow = "0px 0px 30px rgb(53, 213, 253)";
+            eWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 0, 0)";
             setTimeout(() => {
                 gWeaponBtn.style.boxShadow = "none";
                 eWeaponBtn.style.boxShadow = "none";
@@ -359,8 +359,8 @@ function eMagic() {
             eHealthLoss.appendChild(eHealthLossTxt);
             document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //Select button
-            gMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
-            eMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            gMagicBtn.style.boxShadow = "0px 0px 30px rgb(53, 213, 253)";
+            eMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 0, 0)";
             setTimeout(() => {
                 gMagicBtn.style.boxShadow = "none";
                 eMagicBtn.style.boxShadow = "none";
@@ -375,8 +375,8 @@ function eMagic() {
             eHealthLoss.appendChild(eHealthLossTxt);
             document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //Select Button
-            gShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
-            eMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            gShieldBtn.style.boxShadow = "0px 0px 30px rgb(53, 213, 253)";
+            eMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 0, 0)";
             setTimeout(() => {
                 gShieldBtn.style.boxShadow = "none";
                 eMagicBtn.style.boxShadow = "none";
@@ -397,8 +397,8 @@ function eMagic() {
             eHealthLoss.appendChild(eHealthLossTxt);
             document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //Select Button
-            gWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
-            eMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            gWeaponBtn.style.boxShadow = "0px 0px 30px rgb(53, 213, 253)";
+            eMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 0, 0)";
             setTimeout(() => {
                 gWeaponBtn.style.boxShadow = "none";
                 eMagicBtn.style.boxShadow = "none";
@@ -424,8 +424,8 @@ function eShield() {
             gHealthLoss.appendChild(gHealthLossTxt);
             document.querySelector('.gHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //Select Button
-            gMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
-            eShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            gMagicBtn.style.boxShadow = "0px 0px 30px rgb(53, 213, 253)";
+            eShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 0, 0)";
             setTimeout(() => {
                 gMagicBtn.style.boxShadow = "none";
                 eShieldBtn.style.boxShadow = "none";
@@ -446,8 +446,8 @@ function eShield() {
             eHealthLoss.appendChild(eHealthLossTxt);
             document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //Select Button
-            gShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
-            eShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            gShieldBtn.style.boxShadow = "0px 0px 30px rgb(53, 213, 253)";
+            eShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 0, 0)";
             setTimeout(() => {
                 gShieldBtn.style.boxShadow = "none";
                 eShieldBtn.style.boxShadow = "none";
@@ -462,8 +462,8 @@ function eShield() {
             eHealthLoss.appendChild(eHealthLossTxt);
             document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //Select Button
-            gWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
-            eShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            gWeaponBtn.style.boxShadow = "0px 0px 30px rgb(53, 213, 253)";
+            eShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 0, 0)";
             setTimeout(() => {
                 gWeaponBtn.style.boxShadow = "none";
                 eShieldBtn.style.boxShadow = "none";
@@ -495,8 +495,8 @@ function eWeapon() {
             eHealthLoss.appendChild(eHealthLossTxt);
             document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
              //Select Button
-             gMagicBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
-             eWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+             gMagicBtn.style.boxShadow = "0px 0px 30px rgb(53, 213, 253)";
+             eWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 0, 0)";
              setTimeout(() => {
                  gMagicBtn.style.boxShadow = "none";
                  eWeaponBtn.style.boxShadow = "none";
@@ -510,8 +510,8 @@ function eWeapon() {
             gHealthLoss.appendChild(gHealthLossTxt);
             document.querySelector('.gHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //Select Button
-            gShieldBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
-            eWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            gShieldBtn.style.boxShadow = "0px 0px 30px rgb(53, 213, 253)";
+            eWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 0, 0)";
             setTimeout(() => {
                 gShieldBtn.style.boxShadow = "none";
                 eWeaponBtn.style.boxShadow = "none";
@@ -532,8 +532,8 @@ function eWeapon() {
             eHealthLoss.appendChild(eHealthLossTxt);
             document.querySelector('.eHealthLossTxt').style.left = `${randomHealth(-200, 200)}px`;
             //Select Button
-            gWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
-            eWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 132, 0)";
+            gWeaponBtn.style.boxShadow = "0px 0px 30px rgb(53, 213, 253)";
+            eWeaponBtn.style.boxShadow = "0px 0px 30px rgb(255, 0, 0)";
             setTimeout(() => {
                 gWeaponBtn.style.boxShadow = "none";
                 eWeaponBtn.style.boxShadow = "none";
